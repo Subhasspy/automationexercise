@@ -15,7 +15,7 @@ public class SmokeSteps {
     public void navigateToHomePage(){
         Hooks.driver.get("https://automationexercise.com/");
         WebDriverWait wait = new WebDriverWait(Hooks.driver, Duration.ofSeconds(5));
-        wait.until(ExpectedConditions.visibilityOf(Hooks.driver.findElement(By.xpath("//img[@alt=\"Website for automation practice\"]"))));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//img[@alt=\"Website for automation practice\"]")));
     }
     @Then("the page title should contain {string}")
     public void verifyPageTitle(String expectedTitle){
